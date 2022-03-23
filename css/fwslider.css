@@ -76,15 +76,15 @@
 	margin: 12% auto;
 }
 #fwslider .title {  /* Slider Title Style */
-	color: #FFF;
-	font-size: 5em;
-	padding-top: 5%;
-	font-style: normal;
+	color: #6CCCF6;
+	font-size: 2em;
+	padding-top: 0%;
+	font-style: oblique;
 	text-transform: uppercase;
 	border: none;
-	font-weight: 800;
+	font-weight: 1000;
 	line-height: 1.3em;
-	margin-bottom: 5%;
+	margin-bottom: 0%;
 }
 /* ------------------------------- 4. Media Query Max Width 1300, Min Width 720 ------------------------------- */
 /* ------------------------------- 5. Media Query Max Width 719 ------------------------------- */
@@ -95,19 +95,19 @@
     #fwslider .timers { display:none; }
     #fwslider .slide_content {cursor: pointer;}
 	#fwslider .title {
-		margin-left: 19%;
+		margin-left: 100%;
 		font-size: 3em;
 	}
 }
 @media (max-width:1366px){
    #fwslider .title {
-		margin-left:8%;
-		font-size: 4em;
+		margin-left: 0%;
+		font-size: 3em;
 	}
 }
 @media (max-width:768px)
 	#fwslider .title {
-		margin-left: 19%;
+		margin-left: 100%;
 		font-size: 3em;
 	}
 }
