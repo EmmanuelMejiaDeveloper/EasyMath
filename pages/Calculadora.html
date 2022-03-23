@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>EasyMath | Home</title>
+    <link href="../css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <link href="../css/style.css" rel='stylesheet' type='text/css' />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <script src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/fwslider.css" media="all">
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/fwslider.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".dropdown img.flag").addClass("flagvisibility");
+
+            $(".dropdown dt a").click(function() {
+                $(".dropdown dd ul").toggle();
+            });
+
+            $(".dropdown dd ul li a").click(function() {
+                var text = $(this).html();
+                $(".dropdown dt a span").html(text);
+                $(".dropdown dd ul").hide();
+                $("#result").html("Selected value is: " + getSelectedValue("sample"));
+            });
+
+            function getSelectedValue(id) {
+                return $("#" + id).find("dt a span.value").html();
+            }
+
+            $(document).bind('click', function(e) {
+                var $clicked = $(e.target);
+                if (! $clicked.parents().hasClass("dropdown"))
+                $(".dropdown dd ul").hide();
+            });
+
+
+            $("#flagSwitcher").click(function() {
+                $(".dropdown img.flag").toggleClass("flagvisibility");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="header" style="background: #6CCCF6 !important;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="header-left">
+                        <div class="logo">
+                            <a href="index.html"><img src="../images/logo.png" style="width: 90px !important; height: 65px !important;"></a>
+                        </div>
+                        <div class="menu" style="margin-left: auto !important; margin-right: auto !important; text-align: right !important; justify-content:center !important;">
+                            <ul class="nav" id="nav">
+                                <li><a href="./pages/shop.html">Inicio</a></li>
+                                <li><a href="./pages/team.html">Banco de ejercicios</a></li>
+                                <li><a href="./pages/experiance.html">Tutoriales</a></li>
+                            </ul>
+                            <script type="text/javascript" src="js/responsive-nav.js"></script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="banner">
+        <div id="fwslider">
+            <div class="slider_container">
+                <div class="slide">
+                    <img src="../images/banner.jpg" class="img-responsive" alt="">
+                    <div class="slide_content">
+                        <div class="slide_content_wrap">
+                            <h4 class="title">	Calculadora
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="content-top">
+            <h2>Calculadora</h2>
+           
+
+    <div class="footer" style="background: #6CCCF6 !important;">
+        <div class="container last">
+            <div class="row last">
+                <div class="col-md-3 last">
+                    <ul class="footer_box last">
+                        <img src="./images/logo.png" class="img-responsive" alt="">
+                    </ul>
+                </div>
+
+                <div class="col-md-3 last">
+                    <ul class="footer_box last">
+                        <br>
+                        <br>
+                        <p>
+                            La idea de este proyecto surgió a partir de la evidente carencia
+                            de conocimientos en el área de matemáticas básicas, por parte
+                            de las personas en el país, no importa el nivel educativo ni la edad.
+                        </p>
+                    </ul>
+                </div>
+
+                <div class="col-md-3" style="float: right !important; text-align: center;">
+                    <ul class="footer_box">
+                        <h4 style="text-align: center;">Síguenos en redes sociales</h4>
+                        <ul class="social">
+                            <li class="facebook"><a href="#"><span></span></a></li>@easy_math
+                            <br>
+                            <li class="instagram"><a href="#"><span> </span></a></li>@easy-math
+                            <br>
+                            <li class="youtube"><a href="#"><span> </span></a></li>Easy Math
+                            <br>
+                            <li class="twitter"><a href="#"><span> </span></a></li>@easy_1_math
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+            <div class="row footer_bottom last">
+                <div class="copy last">
+                    <p class="last">2022 © Equipo <a>JEEEM</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        .last {
+            color: #FFFF !important;
+        }
+    </style>
+</body>
+</html>
