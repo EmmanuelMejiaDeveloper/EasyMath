@@ -28,14 +28,18 @@ if($res5 == "6/8"){
   $suma=$suma+1;
 }
 
-if($res6 == 54){
+if($res6 == 55){
   $suma=$suma+1;
 }
 
-if($res7 == 5){
+if($res7 == 6){
   $suma=$suma+1;
 }
 
 echo '<script>alert("Tienes '.$suma.' aciertos de 7");</script>';
-echo '<script> window.location="../ejercicio1.html"; </script>';
+if($suma == 7){
+    echo '<script> window.location="../ejercicio2.html"; </script>';
+}else{
+    echo '<script> window.location="../ejercicio1.html"; </script>';
+}
  ?>

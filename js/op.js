@@ -10,6 +10,8 @@ function init(){
   var resta = document.getElementById('resta');
   var multiplicacion = document.getElementById('multiplicacion');
   var division = document.getElementById('division');
+  var raiz = document.getElementById('raiz');
+  var exponencial = document.getElementById('exponencial');
   var igual = document.getElementById('igual');
   var uno = document.getElementById('uno');
   var dos = document.getElementById('dos');
@@ -56,30 +58,49 @@ function init(){
   reset.onclick = function(e){
       resetear();
   }
+
+
   suma.onclick = function(e){
       operandoa = resultado.textContent;
       operacion = "+";
       limpiar();
   }
+
   resta.onclick = function(e){
       operandoa = resultado.textContent;
       operacion = "-";
       limpiar();
   }
+
   multiplicacion.onclick = function(e){
       operandoa = resultado.textContent;
       operacion = "*";
       limpiar();
   }
+
   division.onclick = function(e){
       operandoa = resultado.textContent;
       operacion = "/";
       limpiar();
   }
+
+  raiz.onclick = function(e){
+      operandoa = resultado.textContent;
+      operacion = "√";
+      limpiar();
+  }
+
+  exponencial.onclick = function(e) {
+      operandoa = resultado.textContent;
+      operacion = "˄";
+      limpiar();
+  }
+
   igual.onclick = function(e){
       operandob = resultado.textContent;
       resolver();
   }
+
   function limpiar(){
   resultado.textContent = "";
 }
@@ -108,9 +129,15 @@ function resolver(){
     case "/":
       res = parseFloat(operandoa) / parseFloat(operandob);
       break;
+
+    case "√":
+      res = Math.sqrt(operandoa);
+      break;
+
+    case "˄":
+      res = Math.pow(operandoa,operandob);
+      break;
   }
   resetear();
   resultado.textContent = res;
 }
-
-

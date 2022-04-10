@@ -35,5 +35,10 @@ if($res6 == 36.9047 or $res6 == 36.90 or $res6 == 36){
 
 
 echo '<script>alert("Tienes '.$suma.' aciertos de 6");</script>';
-echo '<script> window.location="../ejercicio2.html"; </script>';
+if($suma == 6){
+    echo '<script> window.location="../ejercicio3.html"; </script>';
+}else{
+    echo '<script> window.location="../ejercicio2.html"; </script>';
+}
+
  ?>

@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>EasyMath | Lección 5</title>
+    <link href="../css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <link href="../css/style.css" rel='stylesheet' type='text/css' />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <script src="../js/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/fwslider.css" media="all">
+    <script src="../js/jquery-ui.min.js"></script>
+    <script src="../js/fwslider.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".dropdown img.flag").addClass("flagvisibility");
+
+            $(".dropdown dt a").click(function() {
+                $(".dropdown dd ul").toggle();
+            });
+
+            $(".dropdown dd ul li a").click(function() {
+                var text = $(this).html();
+                $(".dropdown dt a span").html(text);
+                $(".dropdown dd ul").hide();
+                $("#result").html("Selected value is: " + getSelectedValue("sample"));
+            });
+
+            function getSelectedValue(id) {
+                return $("#" + id).find("dt a span.value").html();
+            }
+
+            $(document).bind('click', function(e) {
+                var $clicked = $(e.target);
+                if (! $clicked.parents().hasClass("dropdown"))
+                $(".dropdown dd ul").hide();
+            });
+
+
+            $("#flagSwitcher").click(function() {
+                $(".dropdown img.flag").toggleClass("flagvisibility");
+            });
+        });
+    </script>
+</head>
+<body>
+    <p id="respuesta4"></p>
+    <div class="header" style="background: #6CCCF6 !important;">
+            <div class="row">
+
+                    <div class="header-left">
+                        <div class="logo">
+                            <a href="../index.html"><img src="../images/logo.png" style="width: 90px !important; height: 65px !important;"></a>
+                        </div>
+                        <div class="menu" style="margin-left: auto !important; margin-right: auto !important; text-align: right !important; justify-content:center !important;">
+                            <ul class="nav" id="nav">
+                                <li><a href="../index.html"> <img src="../images/meta/aa.png"> Inicio</a></li>
+                                <li><a href="./lecciones.html"> <img src="../images/meta/D.png"> Lecciones</a></li>
+                                <li><a href="./bancoejercicio.html"> <img src="../images/meta/C.png"> Ejercicios</a></li>
+                                <li><a href="./Calculadora.html"> <img src="../images/meta/B.png"> Calculadora</a></li>
+                                <li><a href="./tutoriales.html"> <img src="../images/meta/E.png"> Tutoriales</a></li>
+                            </ul>
+                            <script type="text/javascript" src="js/responsive-nav.js"></script>
+                        </div>
+                    </div>
+
+            </div>
+    </div>
+    <div class="banner">
+        <div id="fwslider">
+            <div class="slider_container">
+                <div class="slide">
+                    <img src="../images/lecc.png" class="img-responsive" alt="">
+	            </div>
+	        </div>
+	    </div>
+    </div>
+    <div class="main">
+        <div class="shop_top">
+            <div class="container">
+                <h3><a href="#">Regla de 3</a></h3>
+                <p>La regla de 3 simple es una operación que nos ayuda a resolver rápidamente problemas de proporcionalidad, tanto directa como inversa. </p>
+                <p>Para hacer una regla de tres simple necesitamos 3 datos: dos magnitudes proporcionales entre sí, y una tercera magnitud. A partir de estos, averiguaremos el cuarto término de la proporcionalidad. </p>
+                <h3><a href="#">Regla de 3 directa</a></h3>
+                <p>Empezaremos viendo cómo aplicarla en casos de proporcionalidad directa (cuando aumenta una magnitud también lo hace la otra).</p>
+                <p>Colocaremos en una tabla los 3 datos (a los que llamamos “a”, “b” y “c”) y la incógnita, es decir, el dato que queremos averiguar (que llamaremos “x”). Después, aplicaremos la siguiente fórmula:</p>
+                <br>
+                <img src="../images/r1.png">
+                <br>
+                <h3><a href="#">Ejemplos</a></h3>
+                <br>
+                <p>Al llegar al hotel nos han dado un mapa con los lugares de interés de la ciudad, y nos han dicho que 5 centímetros del mapa representan 600 metros de la realidad. Hoy queremos ir a un parque que se encuentra a 8 centímetros del hotel en el mapa. ¿A qué distancia del hotel se encuentra este parque?</p>
+                <p> Vamos a hacer la tabla con los 3 datos y la incógnita (“x”), y hallaremos “x” con la fórmula que acabamos de aprender: </p>
+                <br>
+                <img src="../images/r2.png">
+                <br>
+                <p>Solución: El parque se encuentra a 960 metros del hotel </p>
+                <br>
+                <p>Ayer 2 camiones transportaron una mercancía desde el puerto hasta el almacén. Hoy 3 camiones, iguales a los de ayer, tendrán que hacer 6 viajes para transportar la misma cantidad de mercancía del almacén al centro comercial. ¿Cuántos viajes tuvieron que hacer ayer los camiones?</p>
+                <p>Colocamos los datos en una tabla y aplicamos la fórmula de la regla de 3 simple inversa:</p>
+                <br>
+                <img src="../images/r3.png">
+                <br>
+                <p>%n/m*100 </p>
+                <br>
+                <p>Solución: Ayer los 2 camiones hicieron 9 viajes. </p>
+                <br>
+                <center>
+                    <button type="button" name="button" class="lef"><a href="./ejercicio1.html">Ir a los ejercicios</a></button>
+                </center>
+            </div>
+        </div>
+    </div>
+    <style>
+        .jj{
+            width: 60px;
+            height: 60px;
+        }
+    </style>
+    <a class="jj" href="#respuesta4"><img class="jj" src="../images/flecha.png"></a>
+    <div class="footer" style="background: #6CCCF6 !important;">
+        <div class="container last">
+            <div class="row last">
+                <div class="col-md-3 last">
+                    <ul class="footer_box last">
+                        <img src="../images/logo.png" class="img-responsive" alt="">
+                    </ul>
+                </div>
+
+                <div class="col-md-3 last">
+                    <ul class="footer_box last">
+                        <br>
+                        <br>
+                        <p>
+                            La idea de este proyecto surgió a partir de la evidente carencia
+                            de conocimientos en el área de matemáticas básicas, por parte
+                            de las personas en el país, no importa el nivel educativo ni la edad.
+                        </p>
+                    </ul>
+                </div>
+
+                <div class="col-md-3" style="float: right !important; text-align: center;">
+                    <ul class="footer_box">
+                        <h4 style="text-align: center;">Síguenos en redes sociales</h4>
+                        <ul class="social">
+                            <li class="facebook"><a href="#"><span></span></a></li>@easy_math
+                            <br>
+                            <li class="instagram"><a href="#"><span> </span></a></li>@easy-math
+                            <br>
+                            <li class="youtube"><a href="#"><span> </span></a></li>Easy Math
+                            <br>
+                            <li class="twitter"><a href="#"><span> </span></a></li>@easy_1_math
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+            <div class="row footer_bottom last">
+                <div class="copy last">
+                    <p class="last">2022 © Equipo <a>JEEEM</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        .last {
+            color: #FFFF !important;
+        }
+    </style>
+</body>
+</html>

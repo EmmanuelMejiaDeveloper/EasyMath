@@ -1,73 +1,72 @@
 <!DOCTYPE HTML>
 <html>
-<head>
-    <title>EasyMath | Home</title>
-    <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
-    <link href="css/style.css" rel='stylesheet' type='text/css' />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-    <script src="js/jquery.min.js"></script>
-    <link rel="stylesheet" href="css/fwslider.css" media="all">
-    <script src="js/jquery-ui.min.js"></script>
-    <script src="js/fwslider.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $(".dropdown img.flag").addClass("flagvisibility");
+    <head>
+        <title>EasyMath | Home</title>
+        <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+        <link href="css/style.css" rel='stylesheet' type='text/css' />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+        <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+        <script src="js/jquery.min.js"></script>
+        <link rel="stylesheet" href="css/fwslider.css" media="all">
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="js/fwslider.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $(".dropdown img.flag").addClass("flagvisibility");
 
-            $(".dropdown dt a").click(function() {
-                $(".dropdown dd ul").toggle();
+                $(".dropdown dt a").click(function() {
+                    $(".dropdown dd ul").toggle();
+                });
+
+                $(".dropdown dd ul li a").click(function() {
+                    var text = $(this).html();
+                    $(".dropdown dt a span").html(text);
+                    $(".dropdown dd ul").hide();
+                    $("#result").html("Selected value is: " + getSelectedValue("sample"));
+                });
+
+                function getSelectedValue(id) {
+                    return $("#" + id).find("dt a span.value").html();
+                }
+
+                $(document).bind('click', function(e) {
+                    var $clicked = $(e.target);
+                    if (! $clicked.parents().hasClass("dropdown"))
+                    $(".dropdown dd ul").hide();
+                });
+
+
+                $("#flagSwitcher").click(function() {
+                    $(".dropdown img.flag").toggleClass("flagvisibility");
+                });
             });
-
-            $(".dropdown dd ul li a").click(function() {
-                var text = $(this).html();
-                $(".dropdown dt a span").html(text);
-                $(".dropdown dd ul").hide();
-                $("#result").html("Selected value is: " + getSelectedValue("sample"));
-            });
-
-            function getSelectedValue(id) {
-                return $("#" + id).find("dt a span.value").html();
-            }
-
-            $(document).bind('click', function(e) {
-                var $clicked = $(e.target);
-                if (! $clicked.parents().hasClass("dropdown"))
-                $(".dropdown dd ul").hide();
-            });
-
-
-            $("#flagSwitcher").click(function() {
-                $(".dropdown img.flag").toggleClass("flagvisibility");
-            });
-        });
-    </script>
-</head>
-<body>
-    <div class="header" style="background: #6CCCF6 !important;">
-        <div class="container">
+        </script>
+    </head>
+    <body>
+        <p id="respuesta4"></p>
+        <div class="header" style="background: #6CCCF6 !important;">
             <div class="row">
-                <div class="col-md-12">
-                    <div class="header-left">
-                        <div class="logo">
-                            <a href="index.html"><img src="images/logo.png" style="width: 90px !important; height: 65px !important;"></a>
-                        </div>
-                        <div class="menu" style="margin-left: auto !important; margin-right: auto !important; text-align: right !important; justify-content:center !important;">
-                            <ul class="nav" id="nav">
-                                <li><a href="./pages/shop.html">Inicio</a></li>
-                                <li><a href="./pages/team.html">Banco de ejercicios</a></li>
-                                <li><a href="./pages/experiance.html">Calculadora web</a></li>
-                                <li><a href="./pages/experiance.html">Tutoriales</a></li>
-                            </ul>
-                            <script type="text/javascript" src="js/responsive-nav.js"></script>
-                        </div>
+
+                <div class="header-left">
+                    <div class="logo">
+                        &nbsp;<a href="./index.html"><img src="./images/logo.png" style="width: 90px !important; height: 65px !important;"></a>
+                    </div>
+                    <div class="menu" style="margin-left: auto !important; margin-right: auto !important; text-align: right !important; justify-content:center !important;">
+                        <ul class="nav" id="nav">
+                            <li><a href="./index.html"> <img src="./images/meta/aa.png"> Inicio</a></li>
+                            <li><a href="./pages/lecciones.html"> <img src="./images/meta/D.png"> Lecciones</a></li>
+                            <li><a href="./pages/bancoejercicio.html"> <img src="./images/meta/C.png"> Ejercicios</a></li>
+                            <li><a href="./pages/Calculadora.html"> <img src="./images/meta/B.png"> Calculadora</a></li>
+                            <li><a href="./pages/tutoriales.html"> <img src="./images/meta/E.png"> Tutoriales</a></li>
+                        </ul>
+                        <script type="text/javascript" src="js/responsive-nav.js"></script>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="banner">
+
         <div id="fwslider">
             <div class="slider_container">
                 <div class="slide">
@@ -83,15 +82,13 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="main">
         <div class="content-top">
             <h2>Pon a prueba tus conocimientos</h2>
             <p>Con los 3 distintos niveles del banco de ejercicios</p>
             <ul id="flexiselDemo3">
-                <li><img src="images/facil.png"><h3>Fácil</h3></li>
-                <li><img src="images/medio.png"><h3>Intermedio</h3></li>
-                <li><img src="images/dificil.png"><h3>Díficil</h3></li>
+                <li><a href="./pages/ejercicio1.html"> <img src="images/faciil.png"></a><h3> Fácil</h3></li>
+                <li><a href="./pages/ejercicio2.html"><img src="images/medioo.png"></a><h3>Intermedio</h3></li>
+                <li><a href="./pages/ejercicio3.html"><img src="images/dificiil.png"></a><h3>Díficil</h3></li>
             </ul>
             <script type="text/javascript">
                 $(window).load(function() {
@@ -117,145 +114,144 @@
                             }
                         }
                     });
-
                 });
             </script>
             <script type="text/javascript" src="js/jquery.flexisel.js"></script>
         </div>
-    </div>
-    <div class="content-bottom">
-        <div class="container">
-            <div class="row content_bottom-text">
-                <div class="col-md-7">
-                    <h3>Aprende dinámicamente</h3>
-                    <p class="m_2">Con los mejores videos de internet</p>
+        <div class="content-bottom">
+            <a href="./pages/tutoriales.html">
+                <div class="container">
+                    <div class="row content_bottom-text">
+                        <div class="col-md-7">
+                            <h3 style="color:#69DBFF";>Aprende dinámicamente</h3>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>
-    </div>
-    <div class="content-bottom_2">
-        <div class="container">
-            <div class="row content_bottom-text">
-                <div class="col-md-7">
-                    <h3>Comprueba tus resultados</h3>
-                    <p class="m_2">Con la calculadora web</p>
+        <div class="content-bottom_2">
+            <a href="./pages/Calculadora.html">
+                <div class="container">
+                    <div class="row content_bottom-text">
+                        <div class="col-md-7">
+                            <h3 style="color:#69DBFF";>Comprueba tus resultados</h3>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>
-    </div>
-    <div class="features">
-        <div class="container">
-            <h3 class="m_3">Desarrolladores de la idea</h3>
+        <div class="features">
+            <h3 class="m_2"style="color:#69DBFF";>Desarrolladores de la idea</h3>
             <div class="row">
-                <div class="col-md-3 top_box">
-                    <div class="view view-ninth">
-                        <a href="single.html">
-                            <img src="images/pic1.jpg" class="img-responsive" alt="">
-                            <div class="content">
-                                <h2>Evelin Rojas Garcia</h2>
-                                <p>Desarrolladora Backend</p>
-                            </div>
-                        </a>
+                <div class="col-md-3 top_box real">
+                    <div class="view view-ninth real">
+                        <img src="images/eve.jpg" class="img-responsive real" alt="">
+                        <div class="content real">
+                            <h2>Evelin Rojas Garcia</h2>
+                            <p>Desarrolladora Backend</p>
+                        </div>
                     </div>
                 </div>
-
-                <div class="col-md-3 top_box">
-                    <div class="view view-ninth">
-                        <a href="single.html">
-                            <img src="images/pic1.jpg" class="img-responsive" alt="">
-                            <div class="content">
-                                <h2>Jacquelin Ahuactzi Ahuatzi</h2>
-                                <p>Documentadora</p>
-                            </div>
-                        </a>
+                <div class="col-md-3 top_box real">
+                    <div class="view view-ninth real">
+                        <img src="images/jac.jpg" class="img-responsive real" alt="">
+                        <div class="content real">
+                            <h2>Jacquelin A huactzi Ahuatzi</h2>
+                            <p>Documentadora</p>
+                        </div>
                     </div>
                 </div>
-
-                <div class="col-md-3 top_box">
-                    <div class="view view-ninth">
-                        <a href="single.html">
-                            <img src="images/marco.jpg" class="img-responsive" alt="">
-                            <div class="content">
-                                <h2>Marco Antonio Conde Lira</h2>
-                                <p>Desarrollador</p>
-                            </div>
-                        </a>
+                <div class="col-md-3 top_box real">
+                    <div class="view view-ninth real">
+                        <img src="images/mar.jpg" class="img-responsive real" alt="">
+                        <div class="content real">
+                            <h2>Marco Antonio Conde Lira</h2>
+                            <p>Desarrollador Backend</p>
+                        </div>
                     </div>
                 </div>
-
-                <div class="col-md-3 top_box">
-                    <div class="view view-ninth">
-                        <a href="single.html">
-                            <img src="images/pic1.jpg" class="img-responsive" alt="">
-                            <div class="content">
-                                <h2>Emmanuel Mejía Morales</h2>
-                                <p>Desarrollador Frontend</p>
-                            </div>
-                        </a>
+                <div class="col-md-3 top_box real">
+                    <div class="view view-ninth real">
+                        <img src="images/emm.jpg" class="img-responsive real" alt="">
+                        <div class="content real">
+                            <h2>Emmanuel Mejía Morales</h2>
+                            <p>Desarrolladora Frontend</p>
+                        </div>
                     </div>
                 </div>
-
-                <div class="col-md-3 top_box">
-                    <div class="view view-ninth">
-                        <a href="single.html">
-                            <img src="images/pic1.jpg" class="img-responsive" alt="">
-                            <div class="content">
-                                <h2>Erik Zarate Romero</h2>
-                                <p>Desarrollador FullStack</p>
-                            </div>
-                        </a>
+                <div class="col-md-3 top_box real">
+                    <div class="view view-ninth real">
+                        <img src="images/eri.jpg" class="img-responsive real" alt="">
+                        <div class="content real">
+                            <h2>Erick Zarate Romero</h2>
+                            <p>Desarrollador FullStack</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="footer" style="background: #6CCCF6 !important;">
-        <div class="container last">
-            <div class="row last">
-                <div class="col-md-3 last">
-                    <ul class="footer_box last">
-                        <img src="./images/logo.png" class="img-responsive" alt="">
-                    </ul>
-                </div>
-
-                <div class="col-md-3 last">
-                    <ul class="footer_box last">
-                        <br>
-                        <br>
-                        <p>
-                            La idea de este proyecto surgió a partir de la evidente carencia
-                            de conocimientos en el área de matemáticas básicas, por parte
-                            de las personas en el país, no importa el nivel educativo ni la edad.
-                        </p>
-                    </ul>
-                </div>
-
-                <div class="col-md-3" style="float: right !important; text-align: center;">
-                    <ul class="footer_box">
-                        <h4 style="text-align: center;">Síguenos en redes sociales</h4>
-                        <ul class="social">
-                            <li class="facebook"><a href="#"><span></span></a></li>@easy_math
-                            <br>
-                            <li class="instagram"><a href="#"><span> </span></a></li>@easy-math
-                            <br>
-                            <li class="youtube"><a href="#"><span> </span></a></li>Easy Math
-                            <br>
-                            <li class="twitter"><a href="#"><span> </span></a></li>@easy_1_math
+        <style>
+            .jj{
+                width: 60px;
+                height: 60px;
+            }
+        </style>
+        <a class="jj" href="#respuesta4"><img class="jj" src="./images/flecha.png"></a>
+        <div class="footer" style="background: #6CCCF6 !important;">
+            <div class="container last">
+                <div class="row last">
+                    <div class="col-md-3 last">
+                        <ul class="footer_box last">
+                            <img src="./images/logo.png" class="img-responsive" alt="">
                         </ul>
-                    </ul>
+                    </div>
+
+                    <div class="col-md-3 last">
+                        <ul class="footer_box last">
+                            <br>
+                            <br>
+                            <p>
+                                La idea de este proyecto surgió a partir de la evidente carencia
+                                de conocimientos en el área de matemáticas básicas, por parte
+                                de las personas en el país, no importa el nivel educativo ni la edad.
+                            </p>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3" style="float: right !important; text-align: center;">
+                        <ul class="footer_box">
+                            <h4 style="text-align: center;">Síguenos en redes sociales</h4>
+                            <ul class="social">
+                                <li class="facebook"><a href="#"><span></span></a></li>@easy_math
+                                <br>
+                                <li class="instagram"><a href="#"><span> </span></a></li>@easy-math
+                                <br>
+                                <li class="youtube"><a href="#"><span> </span></a></li>Easy Math
+                                <br>
+                                <li class="twitter"><a href="#"><span> </span></a></li>@easy_1_math
+                            </ul>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div class="row footer_bottom last">
-                <div class="copy last">
-                    <p class="last">2022 © Equipo <a>JEEEM</a></p>
+                <div class="row footer_bottom last">
+                    <div class="copy last">
+                        <p class="last">2022 © Equipo <a>JEEEM</a></p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <style>
-        .last {
-            color: #FFFF !important;
-        }
-    </style>
-</body>
+        <style>
+            .last {
+                color: #FFFF !important;
+            }
+
+            .real {
+                width: 262 px !important;
+                height: 262 px !important;
+            }
+            .eric {
+                float: inherit;
+            }
+        </style>
+    </body>
 </html>
